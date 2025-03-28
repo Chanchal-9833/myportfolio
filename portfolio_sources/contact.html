@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Contact</title>
+        <link rel="stylesheet" href="style.css">
+        
+            
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo1">Portfolio</h2>
+             <nav class="navbar1"> 
+               <a href="project.html" style="--i:1"> Home</a>
+               <a href="about.html" style="--i:2"> About</a>
+               <a href="skills.html" style="--i:3">Skills</a>
+               <a href="projects.html" style="--i:4">Projects</a>
+               <a style="color:aqua;" href="contact.html" style="--i:5"> Contact</a>
+            </nav>
+        </header>
+        <div class="contact">
+        <h1 style="text-align: center;
+            padding:20px 0;">Contact Me Here!</h1> 
+        <br>
+        <form>
+       <label for="fname">Your Name</label><br>
+        <input  type="text" id="name" size="60" placeholder="Name"><br>
+       <label for="femail">Your Email</label><br>
+        <input  id="email" size="60" placeholder="Email id" ><br>
+        <lable for="fmessage">Your Message</lable><br>
+        <textarea  id="text" cols="40" rows="6" ></textarea><br><br>
+         <input  class="submit"type="submit">
+
+
+        </form>
+        </div>
+<script type="text/javasacript">
+        var name=documment.getElementById("name").value;
+        var email=document.getElementById("email").value;
+        var text=document.getElementById("text").value;
+    
+        document.write("Name:"+name+"<br>Email Id:"+email+"<br>Message:"+text)
+</script>
+    </body>
+</html>

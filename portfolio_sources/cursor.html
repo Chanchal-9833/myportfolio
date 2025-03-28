@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>cursor</title>
+        <style>
+            *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color:black;
+    color:aquamarine;
+    position: relative;
+
+}
+
+/*#cursor{
+    height:20px;
+    width:20px;
+    background-color:white;
+    border-radius:50%;
+    position:absolute;
+}*/
+.row{
+    height:120px;
+    width:100%;
+    border-bottom:2px solid white;
+    display:flex;
+    align-items: center;   
+    
+}
+.row img {
+    height:150px;
+    width:150px;
+    object-fit: cover;
+    border-radius:50%;
+    transition:all linear 0.2s;
+    position:absolute;
+    opacity:0;
+
+
+
+}
+.row h1{font-size:6vh;
+   font-weight: 700;
+   justify-content: flex-start;
+   position:relative;
+   z-index: 9;
+   mix-blend-mode:difference;
+
+}
+
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="cursor"></div>
+
+            <div id="row1" class="row"> 
+                <img src="C:\Users\jg841\OneDrive\Desktop\html.chanchal\flag.jpg">
+                <h1>Independence Day</h1>
+            </div>
+
+            <div class="row">
+                <img src="C:\Users\jg841\OneDrive\Desktop\html.chanchal\rakhi.jpg">
+                
+                <h1>Rakshabandhan</h1>
+            </div>
+
+            <div class="row">
+                <img src="C:\Users\jg841\OneDrive\Desktop\html.chanchal\nagpanchami.jpg">
+            <h1>Nagpanchami</h1>
+           </div>
+
+            <div class="row">
+                <img src="C:\Users\jg841\OneDrive\Desktop\html.chanchal\jayanti.jpg">
+            <h1>Govind Gopala</h1>
+            </div>
+
+        </div>
+    <script src="cursor.js"></script>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+<head>
+    <style>
+        *{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;
+                background-color: blueviolet;
+                
+
+			}
+			
+				
+			
+			table{
+                height:350px;
+                width:250px;
+				border:10px,black;
+				
+				border-radius:10px;
+                
+				position:absolute;
+                background-color:papayawhip;
+                object-fit: cover;
+                object-position: center;
+
+			}
+
+            td{
+                height: 20px;
+                width:fit-content;
+                background-color: beige;
+
+            }
+            th{
+                height: 20px;
+                width:fit-content;
+                background-color: papayawhip;
+
+            }
+		
+				
+
+            
+
+		
+    </style>
+<script type="text/javascript">
+let Name=prompt("enter your name:");
+let rollno=parseInt(prompt("enter your roll no:"));
+let Physics=parseInt(prompt("enter your physics marks"));
+let Chemistry=parseInt(prompt("enter your chemistry marks"));
+let Maths=parseInt(prompt("enter your maths marks"));
+let Biology=parseInt(prompt("enter your biology marks"));	
+let total=Physics+Chemistry+Maths+Biology;
+let percentage=(total/4);
+
+document.write("<table border='1'>");
+document.write("<tr>");
+document.write("<th>Student Name</th>");
+document.write("<td>"+Name+"</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<th>Student Roll no</th>");
+document.write("<td>"+rollno+"</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<th>Physics marks</td>");
+document.write("<td>"+Physics+"</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<th>Chemistry marks</th>");
+document.write("<td>"+Chemistry+"</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<th>Maths marks</th>");
+document.write("<td>"+Maths+"</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<th>Biology marks</th>");
+document.write("<td>"+Biology+"</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<th>total:</th>");
+document.write("<td>"+total+"/400"+"</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<th>percentage</th>");
+document.write("<td>"+percentage+"%"+"</td>");
+document.write("</tr>");
+document.write("</table>");
+</script>
+</head>
+
+</html>

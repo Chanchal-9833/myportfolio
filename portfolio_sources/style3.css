@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color:lightseagreen;
+    display:flex;
+    position:relative;
+    align-items: center;
+    justify-content:center;
+
+}#card h4{
+    color: blueviolet;
+}
+#card{
+    height:370px;
+    width:250px;
+    border-radius:10px;
+    background-color:black;
+    padding:2px;
+    position:relative;
+    overflow: hidden;
+}
+#card img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius:10px;
+}
+#card i{
+    color:white;
+    font-size:75px;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    opacity: 0;
+    transition:transform ease 0.5s;
+
+}
+    

@@ -1,0 +1,135 @@
+<html>
+<head>
+<style>
+	body{
+		position:relative;
+		align-items:center;
+		justify-content:center;
+		display:flex;
+		background-color: salmon	;
+		font-family:Verdana, Geneva, Tahoma, sans-serif;
+	}
+	.container{
+		height:450px;
+		width:300px;
+		position:relative;
+        align-items: center;
+		display:flex;
+		justify-content: center;
+		background-color:greenyellow;
+		border:3px solid navy ;
+		border-radius:10px ;
+		
+		
+	}
+	table{
+		background-color: rgb(253, 65, 199);
+		height:400px;
+		width:250px;
+		position:absolute;
+		
+		
+	}
+	#st{
+		height:100%;
+		width:100%;
+		background-color: aquamarine;
+		font-size: 30px;
+	}
+    .input{
+		height: 100%;
+		width:100%;
+		background-color: aquamarine;
+		font-size: 30px;
+		border:none;
+	}
+	#ans{
+		height:100%;
+		width:100%;
+		font-size: 30px;
+		background-color: #49d6a7;
+	}
+	table td{
+		object-fit: fill;
+		text-align: center;
+		text-justify: inter-cluster;
+		font-size: 20px 	; 
+		font-weight: 600;
+		
+	}
+	#btn{
+		height:50px;
+		width:70px;
+		background-color: blueviolet;
+		border-color: purple;
+		border-radius: 10px;
+		font-size: 20px;
+		font-weight: 500;
+
+		
+	}
+    
+
+       
+			
+            
+</style>
+</head>
+<body>
+	
+<div class="container" > 
+	
+<table border="1" style=" border-collapse:collapse;">	
+<tr>
+<td>first   number</td>
+<form>
+<td><input type="number" class="input" id="first"></td>
+</tr>
+<tr>
+<td>Second number</td>
+<td><input type="number" class="input" id="second"></td>
+</tr>
+<tr>
+<td >select operation:</td>
+<td><select id="st"> <option value="+">+</option><option value="-">-</option><option value="*">* </option><option value="/">/</option></td>
+</tr>
+<tr>
+<td><input type="button" value="submit" id="btn" onclick="display()"> Ans</td>
+<td><input type="number" id="ans" disabled></td>
+</tr>
+</form>
+</table>
+</div>
+<script type="text/javascript">
+function display()
+{
+var a=parseInt(document.getElementById("first").value);
+var b=parseInt(document.getElementById("second").value);
+var s=document.getElementById("st").value;
+if(s=="+")
+{var total1=a+b;
+	document.getElementById("ans").value=total1;
+}
+else if(s=="-")
+{var total2=a-b;
+	document.getElementById("ans").value=total2;
+}
+else if(s=="*")
+{
+var total3=a*b;
+	document.getElementById("ans").value=total3;
+}
+else if(s=="/")
+{
+var total4=a/b;
+	document.getElementById("ans").value=total4;
+	if(b==0)
+{alert("please enter natural number" )}
+}
+else
+{ document.write("Wrong Choice");
+}
+}
+</script>
+</body>
+</html>

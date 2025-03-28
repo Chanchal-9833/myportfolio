@@ -1,0 +1,96 @@
+<html>
+	<head><title>billing product</title>
+		<style>
+		
+        *{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;
+
+			}
+			body{
+				background-color:plum;
+				align-items: center;
+				display:flex;
+				justify-content: center;
+
+			}
+			#container{
+                height:400px;
+                width:600px;
+                padding:50px;
+                border-radius:10px;
+                background-color:springgreen;
+				position:relative;
+				align-items: center;
+				display:flex;
+				justify-content: center;
+				
+			}
+			table{
+                height:350px;
+                width:250px;
+				border:10px,black;
+				
+				border-radius:10px;
+            
+				position:absolute;
+                background-color:papayawhip;
+                object-fit: cover;
+                object-position: center;
+
+			}
+		
+				
+
+            
+
+		</style>
+	</head>
+<body>
+<div id="container">
+<table ,border="4">
+<tr>
+<th>Item</th>
+<th>Rate</th>
+<th>Qty</th>
+<th>total</th>
+</tr>
+<tr>
+<td >Shirt</td>
+<td>Rs.550</td>
+<form>
+<td><input type="number" id="s_qty" onblur="s_rate()"></td>
+<td><input type="number" id="s_total" disabled> </td>
+</tr>
+<tr>
+<td>Toys</td>
+<td>Rs.330</td>
+<td><input type="number" id="t_qty" onblur="t_rate()"  ></td>
+<td><input type="number" id="t_total" disabled> </td>
+</tr>
+<tr>
+<td>Trouser</td>
+<td>Rs.700</td>
+<td><input type="number" id="tr_qty" onblur="tr_rate()"></td>
+<td><input type="number" id="tr_total" disabled> </td>
+</tr>
+<tr>
+<td>Sneakers</td>
+<td>Rs.1200</td>
+<td><input type="number" id="sn_qty" onblur="sn_rate()"></td>
+<td><input type="number" id="sn_total" disabled> </td>
+</tr>
+<tr>
+<td><input type="button" value="submit" onclick="totalbill()" ></td>
+<td><input type="number" id="bill" disabled></td>
+</tr>
+
+</form>
+</table>
+</div>
+<script src="onblurjava.js">
+
+</script>
+</body>
+</html>
