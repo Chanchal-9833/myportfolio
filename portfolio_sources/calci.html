@@ -1,0 +1,166 @@
+<html>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            display:flex;
+            position:relative;
+            align-items: center;
+            justify-content:center;
+            background-color: rgb(49, 85, 108);
+            
+        }
+        
+        #calculator{
+            height:450px;
+          width: 350px;
+          border:2px solid black;
+          border-radius: 10px;
+          background-color:#E8F0F2 ;
+          color:black;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          position: relative;
+          justify-content: center;
+        
+          }
+            
+
+           
+    
+        
+        input {
+            
+            height: 70px;
+            width: 350;
+            font-size: 35px;
+            font-weight: 500;
+            background-color: transparent;
+            text-align:right;
+            cursor:pointer;
+
+            
+        }
+
+        .line {
+        
+            position: relative;
+            display:flex;
+            justify-content: center;
+           
+        }
+        
+        .num {
+            margin: 15px;
+            font-size: 20px;
+            border:2px solid #FFFFFF ;
+            border-radius: 50%;
+            align-items: center;
+            display: inline-flex;
+            justify-content: center;
+            background-color:  #FFFFFF ;
+            box-shadow:-8px -8px 15px rgba(32, 29, 123, 0.5);
+            color:#37474F;
+            cursor:pointer;
+            height:45px;
+            width:45px;
+        }
+        .num:hover{
+            background-color:orange;
+            color:black;
+            border-color:orange;
+        }
+
+    </style>
+    <body>
+        <div id="calculator">
+
+        
+        
+        <input id="input" type="text" >
+        
+
+        <div class="line">
+            <button style="color:rgb(91, 229, 91)" class="num" >AC</button>
+            <button style="color:rgb(91, 229, 91)" class="num">X</button>
+            <button style="color:rgb(91, 229, 91)"class="num">%</button>
+            <button style="color:rgb(91, 229, 91)" class="num">/</button>
+        </div>
+
+        <div class="line">
+            <button class="num">7</button>
+            <button class="num">8</button>
+            <button class="num">9</button>
+            <button style="color:rgb(91, 229, 91)" class="num">x</button>
+        </div>
+
+        <div class="line">
+            <button class="num">4</button>
+            <button class="num">5</button>
+            <button class="num">6</button>
+            <button style="color:rgb(91, 229, 91)" class="num">-</button>
+        </div>
+
+        <div class="line">
+            <button class="num">1</button>
+            <button class="num">2</button>
+            <button class="num">3</button>
+            <button style="color:rgb(91, 229, 91)"class="num">+</button>
+        </div>
+
+        <div class="line">
+            <button class="num">0</button>
+            <button class="num">00</button>
+            <button class="num">.</button>
+            <button  style="background-color:orange; border-color:orange" class="num">=</button>
+        </div>
+        
+        </div>
+        <script  type="text/javascript">
+            //function remove(){
+               // document.getElementById("input").value="";
+
+            //}
+            let input=document.getElementById("input");
+            let buttons=document.querySelectorAll("button");
+
+            let string="";
+            let arr=Array.from(buttons)
+            arr.forEach(button=>{
+                button.addEventListener('click',(e) =>{
+                    if(e.target.innerHTML == "="){
+                        string=eval(string);
+                        input.value=string;
+                    }
+
+                    else if(e.target.innerHTML == 'AC'){
+                        string="";
+                        input.value=string;
+                    }
+                    else if(e.target.innerHTML == "X"){
+                        string=string.toString().slice(0,-1);
+                        input.value=string;
+
+                    }
+                    else if(e.target.innerHTML=="x"){
+                        string+="*";
+                        input.value=string;
+                    }
+                   
+
+                    else{
+                        string+= e.target.innerHTML;
+                        input.value=string;
+
+                    }
+                })
+            })
+
+            
+            
+        </script>
+    </body>
+</html>

@@ -68,6 +68,17 @@
 
 		
 	}
+	#rmbtn{
+		height:40px;
+		width:60px;
+		background-color:lime;
+		border-color:fuchsia;
+		border-radius: 10px;
+		font-size: 20px;
+		font-weight: 500;
+
+		
+	}
     
 
        
@@ -97,10 +108,23 @@
 <td><input type="button" value="submit" id="btn" onclick="display()"> Ans</td>
 <td><input type="number" id="ans" disabled></td>
 </tr>
+<tr>
+	<td colspan="2"><input type="button" value="AC" onclick="remove()" id="rmbtn"></td>
+</tr>
 </form>
 </table>
 </div>
 <script type="text/javascript">
+ 
+
+function remove()
+{
+document.getElementById("first").value="";
+document.getElementById("second").value="";
+document.getElementById("ans").value="";
+
+}
+
 function display()
 {
 var a=parseInt(document.getElementById("first").value);

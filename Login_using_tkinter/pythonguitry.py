@@ -3,6 +3,8 @@ from tkinter import messagebox
 import re
 from tkinter import *
 import fetchtable as ft
+import menu
+
 
 def validate_inputs():
     user=name.get()
@@ -66,8 +68,8 @@ def Login():
         passw=pass1.get()
         print(f"The name entered by you is {user}")
         logintodb(user,passw)
-
-
+        
+        menu.open_restaurent()
         
         
         
@@ -116,38 +118,44 @@ def loginerror(user, passw):
     
     
 
-top=Tk()
-top.title("Password changing form")
-top.geometry("400x500")
-top.configure(bg="lightblue") 
+top = Tk()
+top.title("Password Changing Form")
+top.geometry("300x400")
+
+
+frame = Frame(top, bg="#f9a603", bd=5, relief="ridge")  
+frame.place(x=0, y=0, width=420, height=550)
+
 x=StringVar()
 x.set("xyz")
 y=StringVar()
 
-label1=Label(top,text="Enter username:")
-label1.place(x=100,y=100)
+# Labels and Entry Fields
+Label(frame, text="Enter Username:",bg="#f9a603",  fg="white", font=("Arial", 10, "bold")).place(x=30, y=20)
+name = Entry(frame, textvariable=x, bd=3, relief="solid", bg="#ffcccc", fg="black")
+name.place(x=150, y=20)
 
-name=Entry(top,textvariable=x)
-name.place(x=200,y=100)
+Label(frame, text="Enter Password:",bg="#f9a603",  fg="white", font=("Arial", 10, "bold")).place(x=30, y=70)
+pass1 = Entry(frame, bd=3, relief="groove", bg="#ffdddd", fg="black")
+pass1.place(x=150, y=70)
 
-label2=Label(top,text="Enter password:")
-label2.place(x=100,y=150)
+Label(frame, text="Re-type Password:",bg="#f9a603",  fg="white", font=("Arial", 10, "bold")).place(x=30, y=120)
+pass2 = Entry(frame, bd=3, relief="groove", bg="#ffdddd", fg="black")
+pass2.place(x=150, y=120)
 
-pass1=Entry(top)
-pass1.place(x=200,y=150)
+# Buttons
+login = Button(frame, text="Login", command=Login, bg="#DC143C", fg="white", font=("Helvetica", 12, "bold"), relief="flat", cursor="hand2")
+login.place(x=80, y=180)
+login.bind("<Enter>", lambda e: login.config(bg="#ff6347"))
+login.bind("<Leave>", lambda e: login.config(bg="#ff4500"))
 
-label3=Label(top,text="re-type password:")
-label3.place(x=100,y=200)
+sign_in = Button(frame, text="Sign-in", command=Sign_in, bg="#DC143C", fg="white", font=("Helvetica", 12, "bold"), relief="flat", cursor="hand2")
+sign_in.place(x=180, y=180)
+sign_in.bind("<Enter>", lambda e: sign_in.config(bg="#ff6347"))
+sign_in.bind("<Leave>", lambda e: sign_in.config(bg="#ff4500"))
 
-pass2=Entry(top)
-pass2.place(x=200,y=200)
+# Confirmation Message
+confirmation = Label(frame, textvariable=y,bg="#f9a603", fg="white", font=("Helvetica", 14, "bold"))
+confirmation.place(x=30, y=250, width=350)
 
-login=Button(top,text="login",command=Login)
-login.place(x=150,y=250)
-
-sign_in=Button(top,text="Sign-in",command=Sign_in)
-sign_in.place(x=200,y=250)
-
-confirmation=Label(top,textvariable=y)
-confirmation.place(x=120,y=300)
 top.mainloop()
